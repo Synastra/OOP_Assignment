@@ -1,4 +1,4 @@
-import com.google.gson.internal.$Gson$Preconditions;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -38,7 +38,7 @@ public class Crawl {
             Document html = Jsoup.parse(Jsoup.connect(url).get().html());
             //Elements header = html.getElementsByTag("h3");
             Element link = html.select("h3").first();
-            
+
 
             System.out.println("Outer HTML: " + link.outerHtml());
             System.out.println("Inner HTML: " + link.html());
